@@ -6,100 +6,127 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         
 
         <title>Tabulas un formas</title>
     </head>
     <body>
-        <h1>Tabulas</h1>
-        
-        
-        <!-- Emmet saīsinājumi -->
-        <!-- ul>li*3>a -->
-        <!-- table>(tr>td*3)*3 veido tabulu 3 rindas un 3 kolonnas -->
-        <table border="1" cellpadding="5" cellspacing="5">
-            <thead>
-                <tr>
-                    <td>N.p.k</td>
-                    <td>Vārds</td>
-                    <td>Epasts</td>
-                    <td>Darbības</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Jānis</td>
-                    <td>janis@inbox.lv</td>
-                    <td>
-                        <button>Atvērt kartiņu</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>Anna</td>
-                    <td>anna@inbox.lv</td>
-                    <td>
-                        <button>Atvērt kartiņu</button>
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3" rowspan="2">Kopā lietotāju:</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                </tr>
-            </tfoot>
+        <header>
+            <h1>Mācos veidot lapas</h1>
+
+        </header>
+        <nav>
+            <a href="#sec1">Tabulas</a>
+            <a href="#sec2">Formas</a>
+            <a href="#sec3">Semantiskie elementi</a>
+        </nav>
+
+
+        <main class="container w-50">
+
+            <section id="sec1">
+                <h1>Tabulas</h1>
+                
+                
+                <!-- Emmet saīsinājumi -->
+                <!-- ul>li*3>a -->
+                <!-- table>(tr>td*3)*3 veido tabulu 3 rindas un 3 kolonnas -->
+                <table border="1" cellpadding="5" cellspacing="5">
+                    <thead>
+                        <tr>
+                            <td>N.p.k</td>
+                            <td>Vārds</td>
+                            <td>Epasts</td>
+                            <td>Darbības</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>Jānis</td>
+                            <td>janis@inbox.lv</td>
+                            <td>
+                                <button>Atvērt kartiņu</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Anna</td>
+                            <td>anna@inbox.lv</td>
+                            <td>
+                                <button>Atvērt kartiņu</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" rowspan="2">Kopā lietotāju:</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                        </tr>
+                    </tfoot>
+                
+                </table>
+            </section>
+
+
+            <section id="sec2">
+                <h1>Formas</h1>
+                <form method="post" action="https://formtester.goodbytes.be/post.php">
+                    <div>
+                        <label for="name">Jūsu vārds:</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Jūsu epasts:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Parole:</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div>
+                        <label for="car">Jūsu auto marka:</label>
+                        <select name="car" id="car">
+                            <option value=""></option>
+                            <option value="1">BMW</option>
+                            <option value="2">Mercedes</option>
+                            <option value="3">Ford</option>
+                            <option value="4">Opel</option>
+                            <option value="5">Nissan</option>
+                
+                        </select>
+                    </div>
+                    <div>
+                        <label for="bio">Nedaudz par sevi:</label>
+                        <textarea name="bio" id="bio"></textarea>
+                    </div>
+                    <div>
+                        <button type="reset">Notīrīt formas datus</button>
+                        <button type="submit">Piereģistrēties</button>
+                    </div>
+                </form>
+            </section>
             
-        </table>
-
-
-        <h1>Formas</h1>
-        <form method="post" action="https://formtester.goodbytes.be/post.php">
-            <div>
-                <label for="name">Jūsu vārds:</label>
-                <input type="text" name="name" id="name" required>
-            </div><br>
-
-            <div>
-                <label for="email">Jūsu epasts:</label>
-                <input type="email" name="email" id="email" required>
-            </div><br>
-            <div>
-                <label for="password">Parole:</label>
-                <input type="password" name="password" id="password">
-            </div><br>
-            <div>
-                <label for="car">Jūsu auto marka:</label><br>
-                <select name="car" id="car">
-                    <option value=""></option>
-                    <option value="1">BMW</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Ford</option>
-                    <option value="4">Opel</option>
-                    <option value="5">Nissan</option>
-                   
-                </select>
-            </div>
-            <div>
-                <label for="bio">Nedaudz par sevi:</label><br>
-                <textarea name="bio" id="bio"></textarea>
-            </div>    
-
-            <div>
-                <button type="reset">Notīrīt formas datus</button>
-                <button type="submit">Piereģistrēties</button>
-
-            </div>
+            <section id="sec3">
+                
+                
+                      <h1>Semantiskie elementi</h1>
+            </section>
 
 
 
-        </form>
-
+        </main>
+        <footer>
+            visas tiesības ir aizsargātas
+        </footer>
+      
+      
 
 
     </body>
